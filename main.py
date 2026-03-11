@@ -2,7 +2,7 @@
 main.py serves as the starting point.
 Only this file should be run.
 """
-from manageFile import createProject, openProject
+from manageFile import createProject, openProject, duplicateProject
 import textwrap
 
 welcome = textwrap.dedent(f"""\
@@ -13,7 +13,8 @@ welcome = textwrap.dedent(f"""\
 
     1. New project
     2. Open project
-    3. Exit
+    3. Duplicate project
+    4. Exit
 
     Selection: """)
 
@@ -27,6 +28,8 @@ while True:
         elif redirect == 2:
             openProject()
         elif redirect == 3:
+            duplicateProject()
+        elif redirect == 4:
             break
     except:
         pass

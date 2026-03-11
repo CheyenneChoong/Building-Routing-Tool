@@ -1,9 +1,43 @@
 {
     "Structure": {
-        "Floor": [],
-        "Room": [],
-        "Connector": []
+        "Floor": [
+            "1M",
+            "3",
+            "4"
+        ],
+        "Room": {
+            "1M": [],
+            "3": [],
+            "4": [
+                "B-04-01"
+            ]
+        },
+        "Connector": {
+            "1M": [],
+            "3": [],
+            "4": [
+                "StairsB4",
+                "StairsD4"
+            ]
+        },
+        "Checkpoint": {
+            "1M": [],
+            "3": [],
+            "4": [
+                "StairsB4",
+                "StairsD4"
+            ]
+        }
     },
     "Floor Connect": [],
-    "Room Connect": []
+    "Room Connect": {
+        "1M": [],
+        "3": [],
+        "4": []
+    },
+    "Checkpoint Connect": {
+        "1M": [],
+        "3": [],
+        "4": []
+    }
 }

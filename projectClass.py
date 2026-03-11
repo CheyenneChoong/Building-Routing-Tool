@@ -10,11 +10,13 @@ class Project():
             _data = {
                 "Structure": {
                     "Floor": [],
-                    "Room": [],
-                    "Connector": []
+                    "Room": {},
+                    "Connector": {},
+                    "Checkpoint": {}
                 },
                 "Floor Connect": [],
-                "Room Connect": []
+                "Room Connect": {},
+                "Checkpoint Connect": {}
             }
             with open(f"project/{projectName}.json", "w") as _file:
                 json.dump(_data, _file, indent = 4)
@@ -26,7 +28,7 @@ class Project():
     def getStructure(self):
         with open(f"project/{self._projectName}.json", "r") as _file:
             _data = json.load(_file)
-        return [_data["Structure"]["Floor"], _data["Structure"]["Room"], _data["Structure"]["Connector"]]
+        return [_data["Structure"]["Floor"], _data["Structure"]["Room"], _data["Structure"]["Connector"], _data["Structure"]["Checkpoint"]]
     
     def getFloorConnect(self):
         with open(f"project/{self._projectName}.json", "r") as _file:
@@ -37,3 +39,8 @@ class Project():
         with open(f"project/{self._projectName}.json", "r") as _file:
             _data = json.load(_file)
         return _data["Room Connect"]
+
+    def getCheckpointConnect(self):
+        with open(f"project/{self._projectName}.json", "r") as _file:
+            _data = json.load(_file)
+        return _data["Checkpoint Connect"]
